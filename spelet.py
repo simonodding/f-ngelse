@@ -1,5 +1,22 @@
 import time
 
+
+import time
+
+def main_menu():
+    print("\n=== VÄLKOMMEN TILL: FLY FRÅN FÄNGELSET ===")
+    print("1. Starta spelet")
+    print("2. Avsluta\n")
+    choice = input("Välj ett alternativ (1 eller 2): ")
+
+    if choice == "1":
+        start_game()
+    elif choice == "2":
+        print("Hejdå!")
+    else:
+        print("Ogiltigt val, försök igen.")
+        main_menu()
+
 def start_game():
     print("\n--- FLY FRÅN FÄNGELSET ---\n")
     print("Du vaknar upp i en mörk cell. Dörren är låst och du hör vakter prata utanför.\n")
@@ -9,6 +26,7 @@ def start_game():
 def first_choice():
     print("Vad vill du göra?")
     print("1. Undersöka cellen")
+    
     print("2. Ropa på vakten")
     choice = input("\nVälj ett alternativ (1 eller 2): ")
     
@@ -157,5 +175,7 @@ def restart_game():
     else:
         print("Tack för att du spelade!")
 
+
 if __name__ == "__main__":
-    start_game()
+    main_menu()
+
